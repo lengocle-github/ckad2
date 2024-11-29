@@ -1,0 +1,9 @@
+helm repo add bitnami https://charts.bitnami.com/bitnami
+
+helm install my-nginx bitnami/nginx --version 15.5.2 \
+  --set replicaCount=3 \
+  --set service.type=NodePort \
+  --set service.nodePort=30007 > q3-install.txt 2>&1
+
+
+helm upgrade my-nginx bitnami/nginx --version 15.5.3 --set service.type=ClusterIP > q3-update.txt

@@ -1,0 +1,7 @@
+kubectl create namespace q6
+
+kubectl apply -f q6-svc.yaml -n q6
+
+kubectl apply -f q6-pod.yaml -n q6
+
+kubectl run test-curl3 --image=nginx -n q6 -it --rm --restart=Never -- curl 10.104.180.63:3333 > test.html

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-q6-svc
+  namespace: q6
+spec:
+  type: ClusterIP
+  ports:
+  - port: 3333
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: project-q6

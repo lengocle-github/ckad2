@@ -1,0 +1,9 @@
+kubectl create namespace q4
+
+kubectl -n q4 create secret generic default-token --from-literal=token=mysecrettoken
+
+kubectl -n q4 patch serviceaccount default -p '{"secrets": [{"name": "default-token"}]}'
+
+kubectl get serviceaccount default -n q4 -o yaml
+
+kubectl -n q4 get secret default-token -o jsonpath='{.data.token}' | base64 -d > q4-token.txt
