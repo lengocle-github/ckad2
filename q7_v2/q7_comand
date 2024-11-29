@@ -1,4 +1,4 @@
-kubectl create namespace q6
+kubectl create namespace q7
 
 kubectl apply -f q7-pv.yaml
 
