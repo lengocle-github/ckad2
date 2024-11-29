@@ -1,0 +1,2 @@
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS    IMAGES             SELECTOR
+q8-10ab   3/3     3            3           110s   q8-pod-10ab   httpd:2.4-alpine   app=q8-10ab

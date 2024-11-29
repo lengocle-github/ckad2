@@ -3,3 +3,5 @@ kubectl create namespace q8
 kubectl apply -f q8-sa.yaml
 
 kubectl apply -f q8-deploy.yaml
+
+kubectl -n q8 get deployment q8-10ab -o wide > q8-status.txt
