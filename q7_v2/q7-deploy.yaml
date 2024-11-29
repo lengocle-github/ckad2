@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: q7-deploy
+  namespace: q7
+spec:
+  selector:
+    matchLabels:
+      app: q7-deploy
+  template:
+    metadata:
+      labels:
+        app: q7-deploy
+    spec:
+      containers:
+      - name: httpd
+        image: httpd:2.4.41-alpine
+        volumeMounts:
+        - name: project-data
+          mountPath: /tmp/project-data
+      volumes:
+      - name: project-data
+        persistentVolumeClaim:
+          claimName: q7-pvc

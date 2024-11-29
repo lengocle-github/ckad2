@@ -1,0 +1,2 @@
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                SELECTOR
+q7-deploy   1/1     1            1           15m   httpd        httpd:2.4.41-alpine   app=q7-deploy
