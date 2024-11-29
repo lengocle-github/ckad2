@@ -1,0 +1,5 @@
+kubectl create namespace q6
+
+kubectl apply -f q7-pv.yaml
+
+kubectl apply -f q7-pvc.yaml
