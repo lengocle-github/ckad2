@@ -1,0 +1,5 @@
+kubectl create namespace q8
+
+kubectl apply -f q8-sa.yaml
+
+kubectl apply -f q8-deploy.yaml

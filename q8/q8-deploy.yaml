@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: q8-10ab
+  namespace: q8
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: q8-10ab
+  template:
+    metadata:
+      labels:
+        app: q8-10ab
+    spec:
+      serviceAccountName: q8-sa-v2
+      containers:
+      - name: q8-pod-10ab
+        image: httpd:2.4-alpine
+        resources:
+          requests:
+            memory: "20Mi"
+          limits:
+            memory: "50Mi"
